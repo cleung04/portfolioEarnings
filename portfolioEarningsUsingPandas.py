@@ -56,6 +56,9 @@ for i in range(len(df['numberOfShares'])):
 df['projectedChange(%)'] = list
 
 #Summing projected earnings 
+totalCosts = df['totalCost'].sum()
+
+#Summing projected earnings 
 totalProjectedEarnings = df['projectedEarnings'].sum()
 
 #Averaging projected change
@@ -63,6 +66,8 @@ totalProjectedChange = round(df['projectedChange(%)'].mean())
 
 # Display modified DataFrame
 print("Modified DataFrame:\n",df)
+print("Total costs of this portfolio ($):")
+print (totalCosts)
 print("Total projected earnings for this portfolio ($):")
 print (totalProjectedEarnings)
 print("Average projected change for this portfolio (%):")
